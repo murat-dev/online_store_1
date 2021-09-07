@@ -1,0 +1,47 @@
+html{
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: "Ubuntu", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 500;
+  margin: 0;
+  // overflow-y: hidden;
+  box-sizing: border-box!important;
+  overflow-x:hidden;
+}
+.container{
+  padding: 15px 15px 50px 15px; 
+  max-width: 1250px;
+  margin: 0 auto;
+  min-height: 820px;
+  @media (max-width:500px) {
+    padding:0px;
+  } 
+}
+.clonePreview{
+  position: absolute;
+  background-color: #ffffff;
+  transition: 2s ease;
+  // transform: translate(-400px, 0px);
+  z-index: 99;
+}
+
+.clonePreview__move{
+  animation: moveToCart 2s linear 0s 1 normal forwards;
+}
+@keyframes moveToCart {
+  100%{
+    transform: translate(-400px, 0px);
+  }
+}
+
+code {  
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  /* margin: 0; */
+}

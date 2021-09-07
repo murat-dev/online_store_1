@@ -1,0 +1,160 @@
+@import "../../App.scss";
+.menuDropDownMobile__wrapper {
+    // opacity: 0;
+    // visibility: hidden;
+    // z-index: 110;
+    .menuDropDownMobile__shadow {
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        z-index: 110;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.33);
+        transition: 0.5s ease;
+    }
+    .menuDropDownMobile {
+        transition: 0.5s ease;
+        opacity: 0;
+        visibility: hidden;
+        position: fixed;
+        top: 0px;
+        left: 0;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0 7px 10px -9px rgb(50 50 50 / 84%);
+        max-height: 100%;
+        overflow-y: auto;
+        box-sizing: border-box;
+        z-index: 110;
+        .menuDropDownMobile__header {
+            background-color: $mainColor;
+            font-size: 17px;
+            color: #ffffff;
+            line-height: 47px;
+            padding: 0 10px;
+            position: relative;
+            height: 100%;
+            .backToMenu-title {
+                margin-left: 20px;
+                cursor: pointer;
+                height: 47px;
+            }
+            .fa-times {
+                position: absolute;
+                top: 0;
+                right: 0;
+                cursor: pointer;
+                line-height: 47px;
+                width: 47px;
+                text-align: center;
+            }
+            .fa-arrow-left {
+                position: absolute;
+                top: 0;
+                left: 8px;
+                cursor: pointer;
+                line-height: 47px;
+                font-size: 15px;
+                text-align: center;
+            }
+        }
+        .menuDropDownMobile__menu {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            &.all-category > .menu__item {
+                @media all and (max-device-width: 400px) {
+                    font-size: 16px;
+                }
+            }
+            .menu__item {
+                border-top: 1px solid #eeeeee;
+                padding: 0 10px;
+                font-size: 18px;
+                color: #333333;
+                line-height: 47px;
+                cursor: pointer;
+                &.phone {
+                    font-weight: bold;
+                    position: relative;
+                    div {
+                        margin-left: 30px;
+                    }
+                    .fa-phone-alt {
+                        position: absolute;
+                        left: 10px;
+                        top: 0;
+                        font-size: 16px;
+                        line-height: 47px;
+                    }
+                }
+            }
+            .menu__next {
+                position: relative;
+                &.active > i {
+                    transform: rotate(0.5turn) !important;
+                }
+                i {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: #f5f5f5;
+                    color: #7d7d7d;
+                    width: 47px;
+                    line-height: 46px;
+                    text-align: center;
+                }
+            }
+            .menu__next-right {
+                position: relative;
+                .menuDropDownMobile__catalog-title {
+                    margin-left: 25px;
+                }
+                .fa-caret-right {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: #f5f5f5;
+                    color: #7d7d7d;
+                    width: 47px;
+                    line-height: 46px;
+                    text-align: center;
+                }
+                .fa-bars {
+                    position: absolute;
+                    top: 0;
+                    left: 10px;
+                    line-height: 46px;
+                    text-align: center;
+                }
+            }
+        }
+        .menuCollapse {
+            max-height: 0px;
+            overflow: hidden;
+            transition: 0.5s ease;
+            &.first > .menu__item {
+                font-size: 16px;
+                padding: 0 30px;
+            }
+            &.second > .menu__item {
+                font-size: 16px;
+                padding: 0 60px;
+            }
+        }
+    }
+
+    &.opened {
+        .menuDropDownMobile__shadow {
+            opacity: 1;
+            visibility: visible;
+        }
+        .menuDropDownMobile {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+}

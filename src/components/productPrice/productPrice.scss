@@ -1,0 +1,20 @@
+
+
+.info-block__price-saving {
+    margin: 25px 0 25px 0;
+    .info-block__price {
+        display: flex;
+        font-size: 22px;
+        .old-price {
+            color: #a7a7a7;
+            text-decoration: line-through;
+            margin-left: 6px;
+        }
+    }
+    .info-block__saving {
+        margin: 5px 0 34px 0;
+        color: #f84c48;
+        font-size: 14px;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,35 @@
+.menu-block {
+    display: flex;
+    margin: 25px 0 0 0;
+    line-height: 24px;
+    @media (max-width: 845px) {
+        flex-direction: column;
+    }
+    @media (max-width: 400px) {
+        padding: 10px;
+        margin: 0;
+    }
+    .page-content {
+        margin-left: 15px;
+        min-height: 600px;
+        width: 100%;
+        @media (max-width: 845px) {
+            margin-left: 0;
+        }
+        h4 {
+            font-size: 24px;
+            margin: 0 0 8px;
+            font-weight: normal;
+        }
+        hr {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            border: 0;
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        .yandex-map{
+            height: 400px;
+            width: 100%;
+        }
+    }
+}
